@@ -284,7 +284,7 @@
   font-weight: 700;
 }
 .fila-alerta-cc:hover {
-  background: #fff7ed;
+  background: rgba(255, 247, 237, 0.12);
 }
 
 .badge-dias-sin-pago {
