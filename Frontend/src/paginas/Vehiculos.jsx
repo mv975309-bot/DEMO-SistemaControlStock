@@ -369,9 +369,9 @@ function Vehiculos() {
       <div class="orden">
         <div class="encabezado">
           <div class="empresa">
-            <div class="empresa-nombre">LÜSCHER HNOS.</div>
-            <div class="empresa-sub">MENDOZA 1457</div>
-            <div class="empresa-sub">3406-440041 / 3406-438400</div>
+            <div class="empresa-nombre">MI EMPRESA</div>
+            <div class="empresa-sub"></div>
+            <div class="empresa-sub"></div>
           </div>
           <div class="titulo-fecha">
             <div class="titulo">ORDEN DE SERVICIO</div>

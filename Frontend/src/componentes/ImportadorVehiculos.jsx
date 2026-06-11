@@ -260,7 +260,7 @@ function ImportadorVehiculos({ onImportar }) {
 
             {vista === "idle" && (
               <div className="importador-body">
-                <p className="importador-label">Seleccioná el archivo Excel de Luscher HNOS</p>
+                <p className="importador-label">Seleccioná el archivo Excel a importar</p>
                 <input type="file" accept=".xls,.xlsx" onChange={leerArchivo} className="input-archivo" />
               </div>
             )}

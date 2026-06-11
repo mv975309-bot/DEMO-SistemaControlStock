@@ -25,7 +25,7 @@ function MainLayout({ children }) {
           {sidebarAbierto && (
             <>
               <div className="sidebar-header">
-                <h2 className="sidebar-titulo">Luscher HNOS</h2>
+                <h2 className="sidebar-titulo">Mi Empresa</h2>
                 <p className="sidebar-subtitulo">Control de stock</p>
               </div>
               <nav className="sidebar-nav">

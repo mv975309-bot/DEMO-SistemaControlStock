@@ -79,7 +79,7 @@ function Dashboard() {
       <div className="dashboard-top">
         <div className="dashboard-header">
           <div>
-            <h1>Luscher HNOS</h1>
+            <h1>Mi Empresa</h1>
             <p className="dashboard-subtitulo">Control de stock</p>
           </div>
         </div>

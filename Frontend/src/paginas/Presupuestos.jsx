@@ -73,8 +73,8 @@ function imprimirPresupuesto(p, camposService) {
 <body>
   <div class="encabezado">
     <div class="empresa">
-      <h1>Lüscher Hnos.</h1>
-      <p>Lubricentro y service automotor</p>
+      <h1>Mi Empresa</h1>
+      <p>Sistema de gestión</p>
     </div>
     <div class="pres-info">
       <h2>Presupuesto</h2>
@@ -126,7 +126,7 @@ function imprimirPresupuesto(p, camposService) {
 
 function compartirWhatsapp(p) {
   const lineas = [];
-  lineas.push(`*Presupuesto — Lüscher Hnos.*`);
+  lineas.push(`*Presupuesto — Mi Empresa*`);
   lineas.push(`📅 Fecha: ${p.fecha}`);
   lineas.push(`👤 Cliente: ${p.clienteNombre}`);
   lineas.push(`🚗 Vehículo: ${p.vehiculoPatente} — ${p.vehiculoModelo}`);

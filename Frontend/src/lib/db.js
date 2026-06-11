@@ -123,7 +123,7 @@ const DEMO_TURNOS = [
 ];
 
 function seedDemoData() {
-  if (localStorage.getItem("_luscher_demo_seeded")) return;
+  if (localStorage.getItem("_demo_seeded")) return;
   guardarLS("cuentasCorrientes",        DEMO_CLIENTES);
   guardarLS("vehiculos",                DEMO_VEHICULOS);
   guardarLS("services",                 DEMO_SERVICES);
@@ -133,7 +133,7 @@ function seedDemoData() {
   guardarLS("caja",                     DEMO_CAJA);
   guardarLS("presupuestos",             DEMO_PRESUPUESTOS);
   guardarLS("turnos",                   DEMO_TURNOS);
-  localStorage.setItem("_luscher_demo_seeded", "1");
+  localStorage.setItem("_demo_seeded", "1");
 }
 
 seedDemoData();
