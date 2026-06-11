@@ -1,79 +1,193 @@
-* {
+/* ═══════════════════════════════════════════════
+   DARK PREMIUM THEME — Sistema Control Stock
+   Inspired by Linear / Emil Kowalski
+   ═══════════════════════════════════════════════ */
+
+:root {
+  /* Backgrounds */
+  --bg:           #09090b;
+  --bg-elevated:  #111115;
+  --bg-overlay:   #1a1a20;
+  --bg-hover:     #1f1f27;
+
+  /* Borders */
+  --border:       #27272a;
+  --border-subtle: rgba(255,255,255,0.06);
+
+  /* Text */
+  --text:         #fafafa;
+  --text-muted:   #a1a1aa;
+  --text-subtle:  #52525b;
+
+  /* Accent — indigo */
+  --accent:       #6366f1;
+  --accent-hover: #4f46e5;
+  --accent-dim:   rgba(99,102,241,0.12);
+
+  /* Semantic */
+  --success:      #22c55e;
+  --success-dim:  rgba(34,197,94,0.1);
+  --danger:       #f87171;
+  --danger-dim:   rgba(248,113,113,0.1);
+  --warning:      #fbbf24;
+  --warning-dim:  rgba(251,191,36,0.1);
+
+  /* Surface tokens */
+  --card:         var(--bg-elevated);
+  --card-border:  var(--border);
+  --input-bg:     #111115;
+  --input-border: #3f3f46;
+  --radius:       8px;
+  --radius-lg:    12px;
+  --shadow:       0 1px 3px rgba(0,0,0,0.4), 0 1px 2px rgba(0,0,0,0.3);
+  --shadow-lg:    0 8px 32px rgba(0,0,0,0.5);
+}
+
+/* ── RESET ── */
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ── BASE ── */
+html { font-size: 15px; }
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
+  line-height: 1.5;
 }
 
-@media (max-width: 768px) {
-  body { overflow-x: hidden; }
-
-  /* Inputs más grandes para touch — evita zoom automático en iOS */
-  input, select, textarea {
-    font-size: 16px !important;
-  }
-
-  /* Modales: scrolleables desde arriba en mobile */
-  .overlay-ingreso {
-    align-items: flex-start !important;
-    padding-top: 16px;
-    overflow-y: auto;
-  }
+/* ── TIPOGRAFÍA ── */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
 }
-/* X de cierre absoluta en modales */
+
+/* ── INPUTS & SELECT ── */
+input, select, textarea {
+  background: var(--input-bg);
+  color: var(--text);
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius);
+  padding: 9px 12px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+input::placeholder, textarea::placeholder {
+  color: var(--text-subtle);
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+}
+select option {
+  background: var(--bg-overlay);
+  color: var(--text);
+}
+
+/* ── BOTONES BASE ── */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.15s, opacity 0.15s, transform 0.1s;
+}
+button:active { transform: scale(0.98); }
+
+/* ── TABLAS ── */
+table { border-collapse: collapse; width: 100%; }
+thead { background: var(--bg-overlay); }
+thead th {
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+tbody tr {
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background 0.1s;
+}
+tbody tr:hover { background: var(--bg-hover); }
+tbody td {
+  color: var(--text);
+  font-size: 14px;
+  padding: 11px 14px;
+}
+tbody tr:last-child { border-bottom: none; }
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #52525b; }
+
+/* ── MODAL GENÉRICO ── */
 .modal-x-cerrar {
   position: absolute;
   top: 14px;
   right: 14px;
   background: none;
   border: none;
-  font-size: 20px;
-  font-weight: 700;
-  color: #374151;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-muted);
   cursor: pointer;
   line-height: 1;
-  padding: 4px 6px;
-  border-radius: 4px;
+  padding: 6px;
+  border-radius: 6px;
   z-index: 10;
+  transition: background 0.15s, color 0.15s;
 }
-.modal-x-cerrar:hover { background: #f3f4f6; }
+.modal-x-cerrar:hover { background: var(--bg-hover); color: var(--text); }
 
 .modal-header-generico {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--border);
 }
 .modal-header-generico h2 {
   margin: 0;
-  font-size: 20px;
+  font-size: 18px;
   flex: 1;
   min-width: 0;
+  color: var(--text);
 }
-
 .modal-header-generico .boton-cerrar-modal {
   padding: 0;
   margin: 0;
   line-height: 1;
-  color: #374151;
-  border-radius: 0;
-}
-.modal-header-generico .boton-cerrar-modal:hover {
+  color: var(--text-muted);
   background: none;
-  color: #111;
+  border: none;
 }
+.modal-header-generico .boton-cerrar-modal:hover { color: var(--text); }
 
-/* Modal X y título genérico */
 .modal-titulo-generico {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   margin: 0 0 20px 0;
   padding-right: 36px;
+  color: var(--text);
+  letter-spacing: -0.02em;
 }
 .modal-x-btn {
   position: absolute;
@@ -81,11 +195,29 @@ body {
   right: 20px;
   background: none;
   border: none;
-  font-size: 22px;
-  font-weight: 400;
-  color: #6b7280;
+  font-size: 20px;
+  color: var(--text-subtle);
   cursor: pointer;
   line-height: 1;
-  padding: 0;
+  padding: 4px 6px;
+  border-radius: 6px;
+  transition: background 0.15s, color 0.15s;
 }
-.modal-x-btn:hover { color: #111; }
+.modal-x-btn:hover { background: var(--bg-hover); color: var(--text); }
+
+/* ── OVERLAY MODAL ── */
+.overlay-ingreso, .modal-overlay {
+  background: rgba(0,0,0,0.7) !important;
+  backdrop-filter: blur(4px);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  body { overflow-x: hidden; }
+  input, select, textarea { font-size: 16px !important; }
+  .overlay-ingreso {
+    align-items: flex-start !important;
+    padding-top: 16px;
+    overflow-y: auto;
+  }
+}
