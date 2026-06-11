@@ -1,0 +1,295 @@
+.contenedor-vehiculos {
+  padding: 20px;
+}
+
+.header-vehiculos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.formulario-vehiculo {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  max-width: 600px;
+}
+
+.layout-vehiculos {
+  display: flex;
+  gap: 24px;
+  height: calc(100vh - 180px);
+}
+
+.panel-vehiculos {
+  width: 280px;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.lista-vehiculos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+}
+
+.tarjeta-vehiculo {
+  background: white;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: border 0.2s;
+}
+
+.tarjeta-vehiculo:hover {
+  border-color: #4f46e5;
+}
+
+.vehiculo-activo {
+  border-color: #4f46e5;
+  background-color: #eef2ff;
+}
+
+.vehiculo-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.vehiculo-patente {
+  font-weight: bold;
+  font-size: 15px;
+  color: #111;
+}
+
+.vehiculo-modelo {
+  font-size: 13px;
+  color: #444;
+}
+
+.vehiculo-dueno {
+  font-size: 12px;
+  color: gray;
+}
+
+.vehiculo-services {
+  font-size: 11px;
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+.boton-eliminar-vehiculo {
+  background: none;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px;
+}
+
+.boton-eliminar-vehiculo:hover {
+  color: #dc2626;
+}
+
+.panel-services {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.header-services {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.vehiculo-dueno-header {
+  font-size: 14px;
+  color: gray;
+  margin-top: 4px;
+}
+
+.formulario-service {
+  background: white;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.service-fila {
+  display: flex;
+  gap: 12px;
+}
+
+.service-campo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.service-campo label {
+  font-size: 12px;
+  color: gray;
+  font-weight: 600;
+}
+
+.tabla-services {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tabla-services th,
+.tabla-services td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+  white-space: nowrap;
+}
+
+.tabla-services th {
+  background-color: #f3f4f6;
+  color: gray;
+  font-size: 12px;
+}
+
+.sin-datos {
+  color: gray;
+  font-size: 14px;
+  margin-top: 20px;
+}
+/* Presupuesto vinculado */
+.banner-presupuesto-vinculado {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.875rem;
+  color: #1e40af;
+  margin-bottom: 16px;
+}
+
+.banner-sin-stock {
+  color: #92400e;
+  font-weight: 500;
+}
+
+.hint-sin-stock {
+  font-size: 0.75rem;
+  color: #b45309;
+  font-weight: 500;
+  margin-left: 6px;
+}
+
+.input-sin-stock {
+  border-color: #f59e0b !important;
+  background: #fffbeb !important;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .layout-vehiculos { height: auto; }
+  .panel-vehiculos { width: 240px; min-width: 240px; }
+}
+
+@media (max-width: 768px) {
+  .contenedor-vehiculos { padding: 12px; }
+
+  /* Header y botones */
+  .header-vehiculos { flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+  .header-vehiculos h1 { font-size: 16px; }
+  .header-vehiculos > div { flex-wrap: wrap; gap: 6px; width: 100%; }
+  .header-vehiculos button { font-size: 12px !important; padding: 7px 10px !important; }
+
+  /* Buscador (usa clases genéricas input-producto y boton-guardar) */
+  .panel-vehiculos .input-producto { font-size: 12px; padding: 7px 8px; }
+  .panel-vehiculos .boton-guardar { font-size: 12px; padding: 7px 10px; }
+
+  /* Layout 2 paneles → columna */
+  .layout-vehiculos {
+    flex-direction: column;
+    height: auto;
+    gap: 16px;
+  }
+
+  .panel-vehiculos {
+    width: 100%;
+    min-width: 0;
+    max-height: 380px;
+  }
+
+  /* 2 tarjetas por fila */
+  .lista-vehiculos {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 6px !important;
+    max-height: 320px;
+    overflow-y: auto;
+  }
+
+  .tarjeta-vehiculo {
+    padding: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    min-width: 0;
+    position: relative;
+  }
+
+  .vehiculo-info { min-width: 0; overflow: hidden; width: 100%; }
+  .vehiculo-patente { font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .vehiculo-modelo { font-size: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .vehiculo-dueno { font-size: 9px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .vehiculo-services { font-size: 9px; }
+  .boton-eliminar-vehiculo { position: absolute; top: 4px; right: 4px; font-size: 11px; padding: 2px; }
+
+  .panel-services { overflow: visible; }
+
+  /* Header del vehículo seleccionado */
+  .header-services { flex-direction: column; gap: 10px; align-items: flex-start; }
+  .header-services h2 { font-size: 17px; }
+  .header-services > button { width: 100%; }
+
+  /* Formulario de service: filas apiladas */
+  .service-fila { flex-direction: column; gap: 8px; }
+
+  /* Tabla de services con scroll */
+  .tabla-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .tabla-services { min-width: 580px; }
+  .tabla-services th, .tabla-services td { padding: 5px 6px; font-size: 11px; }
+
+  /* Tipografía general reducida */
+  .vehiculo-patente { font-size: 13px; }
+  .vehiculo-modelo { font-size: 11px; }
+  .vehiculo-dueno { font-size: 10px; }
+  .vehiculo-services { font-size: 10px; }
+  .tarjeta-vehiculo { padding: 8px 10px; }
+  .sin-datos { font-size: 12px; }
+  .service-campo label { font-size: 11px; }
+  .formulario-service { padding: 12px; gap: 8px; }
+  .header-services h2 { font-size: 15px; }
+
+  /* Form nuevo vehículo */
+  .formulario-vehiculo { max-width: 100%; flex-direction: column; }
+  .formulario-vehiculo input, .formulario-vehiculo button { width: 100%; }
+
+  /* Modal cambiar dueño */
+  .modal-ingreso { width: 95vw !important; max-width: 95vw !important; }
+}

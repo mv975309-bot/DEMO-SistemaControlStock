@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 768px) {
+  body { overflow-x: hidden; }
+
+  /* Inputs más grandes para touch — evita zoom automático en iOS */
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+
+  /* Modales: scrolleables desde arriba en mobile */
+  .overlay-ingreso {
+    align-items: flex-start !important;
+    padding-top: 16px;
+    overflow-y: auto;
+  }
+}
+/* X de cierre absoluta en modales */
+.modal-x-cerrar {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: #374151;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px 6px;
+  border-radius: 4px;
+  z-index: 10;
+}
+.modal-x-cerrar:hover { background: #f3f4f6; }
+
+.modal-header-generico {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 24px 16px;
+}
+.modal-header-generico h2 {
+  margin: 0;
+  font-size: 20px;
+  flex: 1;
+  min-width: 0;
+}
+
+.modal-header-generico .boton-cerrar-modal {
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  color: #374151;
+  border-radius: 0;
+}
+.modal-header-generico .boton-cerrar-modal:hover {
+  background: none;
+  color: #111;
+}
+
+/* Modal X y título genérico */
+.modal-titulo-generico {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  padding-right: 36px;
+}
+.modal-x-btn {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  font-weight: 400;
+  color: #6b7280;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+}
+.modal-x-btn:hover { color: #111; }

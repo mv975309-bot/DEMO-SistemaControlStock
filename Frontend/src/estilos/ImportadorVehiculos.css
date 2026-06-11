@@ -1,0 +1,160 @@
+.importador-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.importador-modal {
+  background: white;
+  border-radius: 12px;
+  width: 560px;
+  max-width: 95vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+
+.importador-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.importador-header h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.importador-cerrar {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  line-height: 1;
+  transition: background 0.15s, color 0.15s;
+}
+
+.importador-cerrar:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.importador-body {
+  padding: 20px 24px 24px;
+}
+
+.importador-label {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 12px;
+}
+
+.importador-exito {
+  font-size: 0.95rem;
+  color: #15803d;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.input-archivo {
+  width: 100%;
+  padding: 10px;
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  background: #f9fafb;
+  box-sizing: border-box;
+}
+
+.boton-importar-vehiculos {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #16a34a;
+  color: white;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.mapeo-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.mapeo-fila {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mapeo-label {
+  width: 160px;
+  min-width: 160px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.mapeo-requerido {
+  color: #dc2626;
+}
+.preview-vehiculos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.preview-vehiculo-card {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.preview-vehiculo-header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.preview-vehiculo-header strong {
+  color: #1d4ed8;
+  font-size: 15px;
+}
+
+.preview-services-count {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.preview-ultimo {
+  color: #374151;
+}
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .importador-modal { width: 95vw !important; max-width: 95vw !important; }
+  .importador-body { padding: 12px; }
+  .preview-vehiculo-card { padding: 10px; }
+}

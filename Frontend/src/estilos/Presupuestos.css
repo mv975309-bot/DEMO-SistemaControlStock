@@ -1,0 +1,592 @@
+.contenedor-presupuestos {
+  padding: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.header-presupuestos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.header-presupuestos h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.header-presupuestos-titulo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.boton-nuevo-pres {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.boton-nuevo-pres:hover { background: #1d4ed8; }
+
+.boton-volver-pres {
+  background: none;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.boton-volver-pres:hover { background: #f3f4f6; }
+
+.boton-cerrar-pres {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.boton-cerrar-pres:hover { background: #1d4ed8; }
+
+.boton-reabrir-pres {
+  background: #d97706;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.boton-reabrir-pres:hover { background: #b45309; }
+
+.boton-imprimir-pres {
+  background: #374151;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.boton-imprimir-pres:hover { background: #1f2937; }
+
+.boton-wsp-pres {
+  background: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.boton-wsp-pres:hover { background: #15803d; }
+
+.boton-eliminar-pres {
+  background: #dc2626;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.boton-eliminar-pres:hover { background: #b91c1c; }
+
+.boton-guardar-pres {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.boton-guardar-pres:hover { background: #1d4ed8; }
+
+/* Filtros */
+.filtros-pres {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/* Input genérico */
+.input-pres {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+.input-pres:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+/* Lista de presupuestos */
+.lista-presupuestos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-pres {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: box-shadow 0.15s;
+}
+
+.card-pres:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-color: #2563eb;
+}
+
+.card-pres-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.card-pres-numero {
+  font-weight: 700;
+  color: #2563eb;
+  margin-right: 10px;
+  font-size: 0.95rem;
+}
+
+.card-pres-cliente {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #111827;
+}
+
+.card-pres-footer {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.card-pres-total {
+  margin-left: auto;
+  font-weight: 700;
+  color: #111827;
+  font-size: 0.95rem;
+}
+
+/* Badges */
+.badge-estado {
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.estado-pendiente {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.estado-cerrado {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+/* Form nuevo */
+.form-presupuesto {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 760px;
+}
+
+.campo-pres {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo-pres label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Dropdown productos */
+.dropdown-productos-pres {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 100;
+  list-style: none;
+  margin: 4px 0 0 0;
+  padding: 4px 0;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.dropdown-item-pres {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.dropdown-item-pres:hover { background: #f3f4f6; }
+
+.dropdown-codigo-pres {
+  color: #6b7280;
+  font-size: 0.82rem;
+  min-width: 70px;
+}
+
+.dropdown-nombre-pres {
+  flex: 1;
+  color: #111827;
+}
+
+.dropdown-precio-pres {
+  font-weight: 600;
+  color: #2563eb;
+}
+
+/* Tabla */
+.tabla-pres {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.tabla-pres th {
+  background: #f9fafb;
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tabla-pres td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #f3f4f6;
+  color: #111827;
+}
+
+.tabla-pres tfoot td {
+  border-top: 2px solid #e5e7eb;
+  border-bottom: none;
+  padding-top: 12px;
+}
+
+.input-cantidad-pres {
+  width: 60px;
+  padding: 4px 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.boton-quitar-pres {
+  background: none;
+  border: none;
+  color: #dc2626;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 4px 8px;
+}
+
+.boton-quitar-pres:hover { background: #fee2e2; border-radius: 4px; }
+
+/* Detalle */
+.detalle-pres-info {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  background: #f9fafb;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.detalle-pres-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detalle-pres-label {
+  font-size: 0.8rem;
+  color: #6b7280;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.detalle-pres-valor {
+  font-size: 0.95rem;
+  color: #111827;
+  font-weight: 500;
+}
+
+.detalle-pres-obs {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.detalle-pres-obs p {
+  color: #374151;
+  font-size: 0.9rem;
+  background: #f9fafb;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 0;
+}
+
+.items-pres {
+  overflow-x: auto;
+}
+
+.fila-dos-campos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.seccion-pres {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.titulo-seccion-pres {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #374151;
+}
+
+.grilla-service-pres {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.campo-service-pres {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label-service-pres {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.producto-seleccionado-pres {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.88rem;
+}
+
+.prod-sel-codigo {
+  color: #6b7280;
+  font-size: 0.82rem;
+  min-width: 60px;
+}
+
+.prod-sel-nombre {
+  flex: 1;
+  color: #111827;
+  font-weight: 500;
+}
+
+.prod-sel-precio {
+  font-weight: 700;
+  color: #16a34a;
+}
+
+.campo-litros-pres {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.total-pres {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  padding: 14px 20px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e40af;
+}
+
+@media (max-width: 600px) {
+  .grilla-service-pres,
+  .fila-dos-campos {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sin-datos-pres {
+  color: #9ca3af;
+  text-align: center;
+  margin-top: 48px;
+  font-size: 0.95rem;
+}
+
+.error-pres {
+  color: #dc2626;
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .contenedor-presupuestos { padding: 12px; }
+
+  .header-presupuestos { flex-direction: column; align-items: stretch; gap: 10px; margin-bottom: 14px; }
+  .header-presupuestos h1 { font-size: 20px; }
+  .boton-nuevo-pres { width: 100%; text-align: center; }
+
+  /* Filtros lista */
+  .filtros-pres { flex-direction: column !important; gap: 8px; }
+  .filtros-pres input, .filtros-pres select { width: 100% !important; max-width: 100% !important; }
+
+  /* Formulario nuevo presupuesto */
+  .fila-dos-campos { flex-direction: column !important; gap: 12px; }
+  .campo-pres { width: 100%; }
+  .input-pres { width: 100%; box-sizing: border-box; }
+
+  /* Grid de service: 1 columna */
+  .grilla-service-pres { grid-template-columns: 1fr !important; }
+
+  /* Tabla detalle y lista */
+  .tabla-pres { min-width: 500px; font-size: 11px; }
+  .tabla-pres th, .tabla-pres td { padding: 5px 6px; }
+
+  /* Tipografía general reducida */
+  .header-presupuestos h1 { font-size: 18px; }
+  .card-pres { padding: 10px 12px; }
+  .card-pres-numero { font-size: 11px; }
+  .card-pres-cliente { font-size: 12px; }
+  .card-pres-patente { font-size: 11px; }
+  .card-pres-total { font-size: 13px; }
+  .badge-estado { font-size: 10px; padding: 2px 7px; }
+  .total-pres { font-size: 0.95rem; padding: 10px 14px; }
+  .sin-datos-pres { font-size: 12px; }
+
+  /* Wrap tabla en scroll */
+  .form-presupuesto .tabla-pres,
+  .contenedor-presupuestos .tabla-pres {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* ── Detalle presupuesto ── */
+
+  /* Volver full width */
+  .boton-volver-pres { width: 100%; text-align: center; font-size: 13px; padding: 8px; }
+
+  /* Título + badge en una fila */
+  .header-presupuestos-titulo { gap: 8px; }
+  .header-presupuestos-titulo h1 { font-size: 16px; }
+  .badge-estado { font-size: 11px; padding: 3px 8px; }
+
+  /* Botones de acción: grilla 2x2 */
+  .header-presupuestos > div[style] {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 6px !important;
+  }
+  .boton-imprimir-pres, .boton-wsp-pres,
+  .boton-cerrar-pres, .boton-reabrir-pres, .boton-eliminar-pres {
+    font-size: 12px !important;
+    padding: 8px 6px !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  /* Info cliente/vehículo/fecha compacta */
+  .detalle-pres-info { padding: 10px 12px !important; gap: 6px !important; }
+  .detalle-pres-label { font-size: 9px !important; }
+  .detalle-pres-valor { font-size: 13px !important; }
+
+  /* Tabla de ítems con scroll */
+  .tabla-pres-wrapper, .detalle-pres-tabla {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  .tabla-pres { min-width: 480px; font-size: 11px; }
+  .tabla-pres th, .tabla-pres td { padding: 5px 6px; }
+
+  /* Cards lista */
+  .lista-presupuestos { gap: 10px; }
+  .card-pres { padding: 12px; }
+  .card-pres-footer { flex-wrap: wrap; gap: 6px; }
+
+  /* Detalle presupuesto */
+  .detalle-pres-info { flex-direction: column !important; gap: 8px; }
+}

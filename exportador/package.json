@@ -1,0 +1,15 @@
+{
+  "name": "exportador",
+  "version": "1.0.0",
+  "description": "Exporta datos del localStorage a Excel (requiere JSON exportado desde el navegador)",
+  "main": "exportar.js",
+  "scripts": {
+    "exportar": "node exportar.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}

@@ -1,0 +1,121 @@
+.boton-borrar-proveedor {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #dc2626;
+  color: white;
+  font-weight: bold;
+}
+
+.borrar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.borrar-modal {
+  position: relative;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  width: 450px;
+  max-width: 95vw;
+}
+
+.borrar-header {
+  margin-bottom: 20px;
+}
+.borrar-header h2 {
+  margin: 0;
+  font-size: 20px;
+  flex: 1;
+  min-width: 0;
+}
+
+.borrar-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.borrar-label {
+  font-size: 14px;
+  color: gray;
+}
+
+.borrar-vacio {
+  color: gray;
+  font-size: 14px;
+}
+
+.borrar-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #f3f4f6;
+  padding: 14px;
+  border-radius: 8px;
+}
+
+.borrar-advertencia {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.borrar-advertencia-sub {
+  font-size: 13px;
+  color: #dc2626;
+}
+
+.borrar-botones {
+  display: flex;
+  gap: 10px;
+}
+
+.boton-cancelar {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.boton-confirmar-borrar {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #dc2626;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.boton-eliminar {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #dc2626;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .boton-cancelar, .boton-confirmar-borrar { width: 100%; }
+}
